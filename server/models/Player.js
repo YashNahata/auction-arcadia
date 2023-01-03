@@ -5,28 +5,28 @@ const PlayerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  team: {
+  role: {
     type: String,
   },
   matches: {
     type: String,
   },
-  innings: {
-    type: String,
-  },
   runs: {
     type: String,
   },
-  highest: {
-    type: String,
-  },
-  hundreds: {
-    type: String,
-  },
-  fifties: {
+  wickets: {
     type: String,
   },
   average: {
+    type: String,
+  },
+  strike_rate: {
+    type: String,
+  },
+  economy: {
+    type: String,
+  },
+  base_price: {
     type: String,
   },
   slug_id: {
