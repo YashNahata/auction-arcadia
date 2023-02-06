@@ -29,6 +29,12 @@ const PlayerSchema = new mongoose.Schema({
   base_price: {
     type: String,
   },
+  video: {
+    type: String,
+  },
+  photo: {
+    type: String,
+  },
   slug_id: {
     type: Number,
     required: true,

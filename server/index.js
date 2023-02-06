@@ -7,12 +7,16 @@ const PORT = process.env.PORT || 3000;
 
 const indexRouter = require("./routes/index");
 const playerRouter = require("./routes/player");
+const createTeamRouter = require("./routes/create-team");
+const bidRouter = require("./routes/bid");
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/", indexRouter);
 app.use("/player", playerRouter);
+app.use("/create-team", createTeamRouter);
+app.use("/bid", bidRouter);
 
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URI, {
