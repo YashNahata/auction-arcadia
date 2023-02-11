@@ -15,7 +15,7 @@ const MainSection = ({ componentId }) => {
 
 	useEffect(() => {
 		const fetchUser = async () => {
-			const res = await axios.get(`http://localhost:3000/player/${playerId}`)
+			const res = await axios.get(`http://localhost:80/player/${playerId}`)
 			setUser(res.data)
 		}
 		fetchUser()

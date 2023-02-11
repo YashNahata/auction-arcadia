@@ -9,7 +9,7 @@ const AddPlayer = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {
-			const res = await axios.post('http://localhost:3000/bidRouter', {
+			const res = await axios.post('http://localhost:80/bid', {
 				teamId,
 				playerId,
 				price,
