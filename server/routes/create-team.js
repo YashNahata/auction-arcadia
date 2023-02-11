@@ -6,7 +6,17 @@ router.post("/", (req, res) => {
   const body = req.body;
   const team = new Team(body);
   team.save();
+
   res.json({ message: "success" });
+});
+
+router.get("/", (req, res) => {
+  Team.find({}, (err, teams) => {
+    if (err) {
+      res.json({ message: err });
+    }
+    res.json(teams);
+  });
 });
 
 module.exports = router;
